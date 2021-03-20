@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 		perror("Close");
 		return 1;
 	}
-printf(frame.data[1]);
+printf("%u",frame.data[1]);
 	return 0;
 
 }
