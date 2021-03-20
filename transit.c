@@ -43,8 +43,8 @@ int main(int argc, char **argv)
 	frame.data[3]='a';
 	frame.data[4]='a';
 	frame.data[5]='a';
-	printf(frame.data)
-	//sprintf(frame.data, "Hello");
+
+	sprintf(frame.data, "Hllo");
 
 	if (write(s, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
 		perror("Write");
@@ -55,6 +55,8 @@ int main(int argc, char **argv)
 		perror("Close");
 		return 1;
 	}
-
+printf(frame.data[1]);
 	return 0;
+
 }
+
